@@ -4,7 +4,7 @@ export const searchCharactersByName = async (name) => {
   );
 
   if (!response.ok) {
-    throw new Error(response.status);
+    throw new Error(response.status.toString());
   }
 
   const data = await response.json();
